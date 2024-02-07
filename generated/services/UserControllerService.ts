@@ -19,7 +19,7 @@ import type { UserUpdateRequest } from "../models/UserUpdateRequest";
 import type { CancelablePromise } from "../core/CancelablePromise";
 import { OpenAPI } from "../core/OpenAPI";
 import { request as __request } from "../core/request";
-import {UnwrapNestedRefs} from "vue";
+import { UnwrapNestedRefs } from "vue";
 
 export class UserControllerService {
   /**
