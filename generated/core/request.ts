@@ -1,3 +1,7 @@
+/* generated using openapi-typescript-codegen -- do no edit */
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
 import axios from "axios";
 import type {
   AxiosError,
@@ -53,6 +57,7 @@ export const base64 = (str: string): string => {
   try {
     return btoa(str);
   } catch (err) {
+    // @ts-ignore
     return Buffer.from(str).toString("base64");
   }
 };
@@ -97,7 +102,6 @@ const getUrl = (config: OpenAPIConfig, options: ApiRequestOptions): string => {
   const path = options.url
     .replace("{api-version}", config.VERSION)
     .replace(/{(.*?)}/g, (substring: string, group: string) => {
-      // eslint-disable-next-line no-prototype-builtins
       if (options.path?.hasOwnProperty(group)) {
         return encoder(String(options.path[group]));
       }
